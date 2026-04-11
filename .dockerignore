@@ -1,0 +1,12 @@
+.git
+.gitignore
+.devcontainer
+.env
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.ruff_cache
+hf-cache
+
