@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-exec bash /workspaces/audio-understanding-service/scripts/smoke-test.sh
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+exec bash "$(cd "${SCRIPT_DIR}/.." && pwd)/scripts/smoke-test.sh"

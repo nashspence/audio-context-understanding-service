@@ -1,5 +1,5 @@
 {
-  "name": "audio-understanding-service dev",
+  "name": "audio-context-understanding-service dev",
   "build": {
     "dockerfile": "Dockerfile",
     "context": ".."
@@ -17,7 +17,8 @@
     "PYTHONUNBUFFERED": "1",
     "UV_LINK_MODE": "copy",
     "NVIDIA_VISIBLE_DEVICES": "all",
-    "NVIDIA_DRIVER_CAPABILITIES": "all"
+    "NVIDIA_DRIVER_CAPABILITIES": "all",
+    "GH_TOKEN": "${localEnv:GH_TOKEN}"
   },
   "runArgs": [
     "--gpus",
@@ -62,7 +63,7 @@
   ],
   "portsAttributes": {
     "8000": {
-      "label": "audio-understanding-service"
+      "label": "audio-context-understanding-service"
     }
   }
 }

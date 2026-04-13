@@ -1,4 +1,4 @@
-# audio-understanding-service
+# audio-context-understanding-service
 
 Minimal GPU-first Docker Compose stack exposing an HTTP API around `Qwen/Qwen2.5-Omni-7B` for audio understanding and captioning.
 

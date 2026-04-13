@@ -25,7 +25,7 @@ logging.basicConfig(
     level=getattr(logging, LOG_LEVEL, logging.INFO),
     format="%(asctime)s %(levelname)s %(name)s %(message)s",
 )
-logger = logging.getLogger("audio-understanding-service")
+logger = logging.getLogger("audio-context-understanding-service")
 
 
 def env_int(name: str, default: int) -> int:
@@ -518,7 +518,7 @@ async def ensure_runtime_started() -> None:
 
 
 app = FastAPI(
-    title="Qwen2.5-Omni Audio Understanding Service",
+    title="Audio Context Understanding Service",
     version="0.1.0",
     docs_url="/docs",
 )
@@ -531,7 +531,7 @@ async def startup_event() -> None:
 
 @app.get("/")
 async def root() -> dict[str, str]:
-    return {"service": "audio-understanding", "model": settings.model_id}
+    return {"service": "audio-context-understanding-service", "model": settings.model_id}
 
 
 @app.get("/healthz")
