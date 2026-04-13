@@ -7,7 +7,7 @@ Minimal GPU-first Docker Compose stack exposing an HTTP API around `Qwen/Qwen2.5
 - Accepts an uploaded audio file plus optional `metadata_json`
 - Returns JSON with a short caption, detailed summary, structured scene/context tags, salient events, uncertainty notes, and optional per-span outputs
 - Downloads model artifacts from the official Hugging Face repo on startup when needed
-- Caches model artifacts in the `hf-cache` Docker volume
+- Caches model artifacts in the repo-local `./.cache/models/huggingface` directory
 - Reports `503` on `/healthz` until the model is fully loaded and the API is ready
 
 ## Run

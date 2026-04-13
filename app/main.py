@@ -36,7 +36,7 @@ def env_int(name: str, default: int) -> int:
 class Settings:
     model_id: str = os.getenv("MODEL_ID", "Qwen/Qwen2.5-Omni-7B")
     model_revision: str = os.getenv("MODEL_REVISION", "main")
-    hf_home: str = os.getenv("HF_HOME", "/hf-cache")
+    hf_home: str = os.getenv("HF_HOME", "/models/cache/huggingface")
     hf_token: str | None = os.getenv("HF_TOKEN") or None
     torch_dtype_name: str = os.getenv("TORCH_DTYPE", "bfloat16")
     device_map: str = os.getenv("DEVICE_MAP", "single_gpu")

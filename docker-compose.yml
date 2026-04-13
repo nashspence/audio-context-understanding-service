@@ -8,7 +8,7 @@ services:
     ports:
       - "${SERVICE_PORT:-8000}:8000"
     volumes:
-      - hf-cache:${HF_HOME:-/hf-cache}
+      - ${MODEL_CACHE_HOST_DIR:-./.cache/models/huggingface}:${HF_HOME:-/models/cache/huggingface}
     gpus: all
     restart: unless-stopped
     healthcheck:
@@ -17,7 +17,4 @@ services:
       timeout: 10s
       retries: 120
       start_period: 20s
-
-volumes:
-  hf-cache:
 

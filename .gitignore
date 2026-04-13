@@ -1,3 +1,4 @@
 /.env
 /test.opus
 __pycache__
+/.cache/
